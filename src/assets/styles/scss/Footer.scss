@@ -1,0 +1,79 @@
+.footer__logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.footer__item {
+    p {
+        font-size: 1.3rem;
+    }
+    &-heading {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    ul li a {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        color: var(--primary-second-color);
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 1.4rem;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: rgba(10, 18, 34, 0.377);
+        color: var(--white);
+        margin-right: 10px;
+        margin-top: 10px;
+        &:hover {
+            background-color: var(--primary-color);
+        }
+    }
+}
+.footer__payment {
+    margin-top: 5px;
+    li + li {
+        margin-left: 10px;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #000;
+    }
+}
+.footer__form {
+    position: relative;
+    input {
+        width: 100%;
+        border-radius: 999px;
+        height: 40px;
+        border: 1px solid var(--primary-color);
+        outline: none;
+        padding: 0 20px;
+        font-size: 1.3rem;
+    }
+    i {
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        font-size: 1.4rem;
+        background-color: var(--primary-color);
+        display: inline-block;
+        position: absolute;
+        border-radius: 999px;
+        color: var(--white);
+        right: 4px;
+        top: 3px;
+        cursor: pointer;
+    }
+}

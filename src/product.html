@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./assets/images/logo/favicon.png" type="image/x-icon" />
+        <title>Nedd Store</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+            defer
+        ></script>
+        <link rel="stylesheet" href="./assets/styles/css/index.css" />
+        <script src="./assets/js/productDetails.js" defer></script>
+        <script src="./index.js" defer></script>
+    </head>
+
+    <body>
+        <div class="app">
+            <!-- header -->
+            <header class="header container-fluid w-100">
+                <div class="container h-100 w-100">
+                    <!-- header logo -->
+                    <div class="row align-items-center h-100">
+                        <div class="col-lg-2 col-md-1 col-2">
+                            <a href="./index.html">
+                                <img class="header__logo" src="./assets/images/logo/logo.png" alt="Nedd Logo" />
+                            </a>
+                        </div>
+                        <!-- header logo end -->
+
+                        <!--header nav show on large screen -->
+                        <div class="col-lg-5 col-md-7 d-none d-md-block">
+                            <nav class="header__nav">
+                                <ul class="header__menu d-flex">
+                                    <li class="header__menu-item">
+                                        <a href="./index.html">Home</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./category.html">
+                                            <span>
+                                                Shop
+                                                <i class="bi bi-chevron-down"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="header__subMenu wrapper__menu rounded">
+                                            <li>
+                                                <a href="./category.html" class="d-flex align-items-center justify-content-between hover-with-bg-color">
+                                                    <span>Shop For Men's</span>
+                                                    <i class="bi bi-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./category.html" class="d-flex align-items-center justify-content-between hover-with-bg-color">
+                                                    <span>Shop For Women's</span>
+                                                    <i class="bi bi-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./category.html" class="d-flex align-items-center justify-content-between hover-with-bg-color">
+                                                    <span>Shop For Accessory's</span>
+                                                    <i class="bi bi-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./category.html">New arrival</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./category.html">Brands</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="#">About Us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!--Eng header nav show on large screen -->
+
+                        <div class="col-lg-5 col-md-3 col-10">
+                            <div class="header__right d-flex align-items-center justify-content-end">
+                                <div class="header__search d-flex align-items-center">
+                                    <i class="header__search-icon bi bi-search text-center"></i>
+                                    <input class="header__search-input" type="text" placeholder="Search Somthings..." spellcheck="false" />
+                                    <div class="header__search-history wrapper__menu rounded">
+                                        <ul>
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="wrapper__menu-item hover-with-bg-color">
+                                                    <i class="bi bi-search me-3"></i>
+                                                    <span class="text-capitalize">alibaba</span>
+                                                </a>
+                                            </li>
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="wrapper__menu-item hover-with-bg-color">
+                                                    <i class="bi bi-search me-3"></i>
+                                                    <span class="text-capitalize">alibaba</span>
+                                                </a>
+                                            </li>
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="wrapper__menu-item hover-with-bg-color">
+                                                    <i class="bi bi-search me-3"></i>
+                                                    <span class="text-capitalize">alibaba</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <i class="header__search-icon text-center header__search-loading bi bi-arrow-clockwise"></i>
+                                    <!-- <i class="header__search-icon text-center header__search-clear bi bi-x-circle-fill"></i> -->
+                                </div>
+                                <div class="header__actions d-flex align-items-center">
+                                    <div class="header__cart me-3">
+                                        <i class="header__cart-icon text-center rounded-circle bi bi-cart hover-with-bg-color"></i>
+                                        <div class="header__cart-menu header__cart-menu--hasitems wrapper__menu rounded">
+                                            <h3>Shopping Cart</h3>
+                                            <ul>
+                                                <li class="header__cart-item">
+                                                    <a
+                                                        href="#"
+                                                        class="wrapper__menu-item hover-with-bg-color d-flex align-items-center p4 mt-3"
+                                                    >
+                                                        <img
+                                                            src="./assets/images/products/1.jpg"
+                                                            alt="cart item img"
+                                                            class="header__cart-item-img rounded-3 me-4"
+                                                        />
+                                                        <div class="header__cart-item-details">
+                                                            <h5 class="header__cart-item-title me-3">
+                                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, ulla
+                                                            </h5>
+                                                            <span class="header__cart-item-price">$ <span>59</span></span>
+                                                        </div>
+                                                        <i class="header__cart-item-delete text-center bi bi-x-circle-fill"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="header__cart-item">
+                                                    <a
+                                                        href="#"
+                                                        class="wrapper__menu-item hover-with-bg-color d-flex align-items-center p4 mt-3"
+                                                    >
+                                                        <img
+                                                            src="./assets/images/products/2.jpg"
+                                                            alt="cart item img"
+                                                            class="header__cart-item-img rounded-3 me-4"
+                                                        />
+                                                        <div class="header__cart-item-details">
+                                                            <h5 class="header__cart-item-title me-3">
+                                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, ulla
+                                                            </h5>
+                                                            <span class="header__cart-item-price">$ <span>59</span></span>
+                                                        </div>
+                                                        <i class="header__cart-item-delete text-center bi bi-x-circle-fill"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="header__cart-item">
+                                                    <a
+                                                        href="#"
+                                                        class="wrapper__menu-item hover-with-bg-color d-flex align-items-center p4 mt-3"
+                                                    >
+                                                        <img
+                                                            src="./assets/images/products/3.jpg"
+                                                            alt="cart item img"
+                                                            class="header__cart-item-img rounded-3 me-4"
+                                                        />
+                                                        <div class="header__cart-item-details">
+                                                            <h5 class="header__cart-item-title me-3">
+                                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, ulla
+                                                            </h5>
+                                                            <span class="header__cart-item-price">$ <span>59</span></span>
+                                                        </div>
+                                                        <i class="header__cart-item-delete text-center bi bi-x-circle-fill"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="header__cart-btns d-flex align-items-center justify-content-center">
+                                                <a href="#" class="own-btn own-btn-danger">Clear Cart</a>
+                                                <a href="./cart.html" class="own-btn own-btn-primary">Go to Cart Page</a>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="header__cart-menu header__cart-menu--noitems wrapper__menu rounded p-4 text-center">
+                                            <img src="./assets/images/cartEmpty/cart-empty.png" alt="emptycart" />
+                                            <h3>Your cart currently is empty</h3>
+                                            <p class="mt-4 mb-4">Before proceed to checkout, you must add some produts to your cart.</p>
+                                            <a class="p-2 own-btn own-btn-primary">
+                                                <i class="bi bi-arrow-bar-left"></i>
+                                                Return to Shop
+                                            </a>
+                                        </div> -->
+                                    </div>
+                                    <div class="header__auth">
+                                        <div class="header__auth--no-user">
+                                            <i class="header__auth-icon text-center rounded-circle bi bi-person hover-with-bg-color"></i>
+                                            <ul class="header__auth-menu wrapper__menu rounded">
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-translate"></i>
+                                                        <span> Language </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-question-square"></i>
+                                                        <span>Feedback and help</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="#"
+                                                        class="d-flex align-items-center justify-content-start hover-with-bg-color separate"
+                                                    >
+                                                        <i class="bi bi-box-arrow-in-right"></i>
+                                                        <span>Login</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- <div class="header__auth--has-user d-flex align-items-center justify-content-center">
+                                            <img class="header__userAvatar" src="./assets/images/banner/Big_banner/big_banner.jpg" alt="" />
+                                            <ul class="header__auth-menu wrapper__menu">
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-person"></i>
+                                                        <span> View profile </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-gear"></i>
+                                                        <span> Settings </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-translate"></i>
+                                                        <span> Language </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-question-square"></i>
+                                                        <span>Feedback and help</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="#"
+                                                        class="d-flex align-items-center justify-content-start hover-with-bg-color separate"
+                                                    >
+                                                        <i class="bi bi-box-arrow-left"></i>
+                                                        <span>Log Out</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- nav show on mobile -->
+                                <div class="header__nav--onMobile-wrapper d-md-none d-sm-block">
+                                    <label for="header__checkbox-show-menu">
+                                        <i class="header__nav--onMobile-menu-icon bi bi-list hover-with-bg-color rounded-circle"></i>
+                                    </label>
+                                    <input type="checkbox" id="header__checkbox-show-menu" class="d-none" />
+                                    <label for="header__checkbox-show-menu" class="header__nav--onMobile-overlay d-none"></label>
+                                    <nav class="header__nav--onMobile">
+                                        <label for="header__checkbox-show-menu">
+                                            <i class="header__nav--onMobile-close bi bi-x-lg"></i>
+                                        </label>
+                                        <ul class="header__menu d-flex">
+                                            <li class="header__menu-item">
+                                                <a href="#">Home</a>
+                                            </li>
+                                            <li class="header__menu-item">
+                                                <a href="#"> Shop </a>
+                                            </li>
+                                            <li class="header__menu-item">
+                                                <a href="#">New arrival</a>
+                                            </li>
+                                            <li class="header__menu-item">
+                                                <a href="#">Brands</a>
+                                            </li>
+                                            <li class="header__menu-item">
+                                                <a href="#">About Us</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header End -->
+            <main class="main container">
+                <div class="row product gx-5">
+                    <div class="col-lg-7 col-md-6 product__image">
+                        <div class="product__image-thumbs d-flex flex-nowrap">
+                            <img class="rounded-5 product__image-thumb" src="./assets/images/products/6.jpg" alt="product thumb" />
+                            <img class="rounded-5 product__image-thumb" src="./assets/images/products/5.jpg" alt="product thumb" />
+                            <img class="rounded-5 product__image-thumb" src="./assets/images/products/4.jpg" alt="product thumb" />
+                        </div>
+                        <div class="product__image-zoom rounded-5"></div>
+                        <div class="product__image-direct d-flex justify-content-center">
+                            <button class="product__image-thumbs-prev btn-circle-icon">
+                                <i class="bi bi-arrow-left"></i>
+                            </button>
+                            <button class="product__image-thumbs-next btn-circle-icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="product__image-smalls d-flex flex-nowrap justify-content-between">
+                            <img class="rounded-5 product__image-small active" src="./assets/images/products/6.jpg" alt="product small" />
+                            <img class="rounded-5 product__image-small" src="./assets/images/products/5.jpg" alt="product small" />
+                            <img class="rounded-5 product__image-small" src="./assets/images/products/4.jpg" alt="product small" />
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 product__info">
+                        <h2 class="product__name">Sweater Heavy Weight</h2>
+                        <div class="d-flex align-items-center mt-5">
+                            <div class="product__price text-center rounded-4">$ <span>123</span></div>
+                            <div class="product__info-review">
+                                <i class="product__star-icon bi bi-star-fill me-2"></i>
+                                <span class="product__star-count">4.4</span>
+                                <span class="m-2">·</span>
+                                <a class="product__review-count d-inline-block">2045 reviews</a>
+                            </div>
+                        </div>
+                        <div class="product__color mt-5">
+                            <div class="product__color-header text-capitalize">
+                                <h2>Color: <span class="product__color-text">Black</span></h2>
+                            </div>
+                            <ul class="product__color-list d-flex align-items-center mt-4">
+                                <li class="product__color-item rounded-circle active" data-color="black"></li>
+                                <li class="product__color-item rounded-circle" data-color="white"></li>
+                                <li class="product__color-item rounded-circle" data-color="orange"></li>
+                                <li class="product__color-item rounded-circle" data-color="blue"></li>
+                                <li class="product__color-item rounded-circle" data-color="Gray"></li>
+                            </ul>
+                        </div>
+                        <div class="product__size mt-5">
+                            <div class="product__size-header text-capitalize d-flex align-items-center justify-content-between">
+                                <h2>size: <span class="product__size-text">M</span></h2>
+                                <div class="product__size-guide">See sizing chart</div>
+                            </div>
+                            <ul class="product__size-list d-flex align-items-center justify-content-between mt-4">
+                                <li class="product__size-item rounded-4 text-center text-uppercase" data-size="xs">xs</li>
+                                <li class="product__size-item rounded-4 text-center text-uppercase" data-size="s">s</li>
+                                <li class="product__size-item rounded-4 text-center text-uppercase active" data-size="m">m</li>
+                                <li class="product__size-item rounded-4 text-center text-uppercase" data-size="l">l</li>
+                                <li class="product__size-item rounded-4 text-center text-uppercase" data-size="xl">xl</li>
+                                <li class="product__size-item rounded-4 text-center text-uppercase" data-size="2xl">2xl</li>
+                                <li class="product__size-item rounded-4 text-center text-uppercase" data-size="3xl">3xl</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mt-5">
+                            <div class="product__quantity rounded-5 me-5 d-flex align-items-center">
+                                <button class="rounded-circle product__quantity-descrease">-</button>
+                                <span class="m-3 text-center product__quantity-count">1</span>
+                                <button class="rounded-circle product__quantity-inscrease">+</button>
+                            </div>
+                            <button class="product__addcart-btn own-btn own-btn-primary">
+                                <i class="bi bi-handbag me-4"></i>
+                                <span class="text-capitalize">add To cart</span>
+                            </button>
+                        </div>
+                        <div class="accordion product__accordion mt-5" id="product__accordion">
+                            <div class="accordion-item border-0 mb-4 product__desc">
+                                <button
+                                    class="own-btn d-flex w-100 align-items-center justify-content-between"
+                                    id="product__desc-heading"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#product__desc-content"
+                                    aria-expanded="true"
+                                    aria-controls="product__desc-content"
+                                >
+                                    Descriptions
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                                <div
+                                    id="product__desc-content"
+                                    class="accordion-collapse collapse show"
+                                    aria-labelledby="product__desc-heading"
+                                >
+                                    <div class="accordion-body product__desc-text">
+                                        Fashion is a form of self-expression and autonomy at a particular period and place and in a specific
+                                        context, of clothing, footwear, lifestyle, accessories, makeup, hairstyle, and body posture.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-4 product__fabric">
+                                <button
+                                    class="own-btn d-flex w-100 align-items-center justify-content-between"
+                                    id="product__fabric-heading"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#product__fabric-content"
+                                    aria-expanded="true"
+                                    aria-controls="product__fabric-content"
+                                >
+                                    Fabric + care
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                                <div
+                                    id="product__fabric-content"
+                                    class="accordion-collapse collapse show"
+                                    aria-labelledby="product__fabric-heading"
+                                >
+                                    <div class="accordion-body product__fabric-text">
+                                        <ul>
+                                            <li class="mt-2">Made from a sheer Belgian power micromesh.</li>
+                                            <li class="mt-2">74% Polyamide (Nylon) 26% Elastane (Spandex)</li>
+                                            <li class="mt-2">Adjustable hook & eye closure and straps</li>
+                                            <li class="mt-2">Hand wash in cold water, dry flat</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-4 product__howfit">
+                                <button
+                                    class="own-btn d-flex w-100 align-items-center justify-content-between"
+                                    id="product__howfit-heading"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#product__howfit-content"
+                                    aria-expanded="true"
+                                    aria-controls="product__howfit-content"
+                                >
+                                    How to fit?
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                                <div
+                                    id="product__howfit-content"
+                                    class="accordion-collapse collapse show"
+                                    aria-labelledby="product__howfit-heading"
+                                >
+                                    <div class="accordion-body product__howfit-text">
+                                        Use this as a guide. Preference is a huge factor — if you're near the top of a size range and/or
+                                        prefer more coverage, you may want to size up.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-4 product__faq">
+                                <button
+                                    class="own-btn d-flex w-100 align-items-center justify-content-between"
+                                    id="product__faq-heading"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#product__faq-content"
+                                    aria-expanded="true"
+                                    aria-controls="product__faq-content"
+                                >
+                                    FAQ
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                                <div
+                                    id="product__faq-content"
+                                    class="accordion-collapse collapse show"
+                                    aria-labelledby="product__faq-heading"
+                                >
+                                    <div class="accordion-body product__faq-text">
+                                        <ul>
+                                            <li class="mt-2">
+                                                All full-priced, unworn items, with tags attached and in their original packaging are
+                                                eligible for return or exchange within 30 days of placing your order.
+                                            </li>
+                                            <li class="mt-2">
+                                                Please note, packs must be returned in full. We do not accept partial returns of packs.
+                                            </li>
+                                            <li class="mt-2">Want to know our full returns policies? Here you go.</li>
+                                            <li class="mt-2">Want more info about shipping, materials or care instructions? Here!</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__detail mt-5">
+                    <h2 class="product__detail-header mb-4">Product Details</h2>
+                    <div class="product__detail-content">
+                        <p>
+                            The patented eighteen-inch hardwood Arrowhead deck --- finely mortised in, makes this the strongest and most
+                            rigid canoe ever built. You cannot buy a canoe that will afford greater satisfaction.
+                        </p>
+                        <br />
+                        <p>
+                            The St. Louis Meramec Canoe Company was founded by Alfred Wickett in 1922. Wickett had previously worked for the
+                            Old Town Canoe Co from 1900 to 1914. Manufacturing of the classic wooden canoes in Valley Park, Missouri ceased
+                            in 1978.
+                        </p>
+                        <br />
+
+                        <ul>
+                            <li>Regular fit, mid-weight t-shirt</li>
+                            <li>Natural color, 100% premium combed organic cotton</li>
+                            <li>Quality cotton grown without the use of herbicides or pesticides - GOTS certified</li>
+                            <li>Soft touch water based printed in the USA</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product__reviews mb-5">
+                    <div class="row g-5 product__review-header align-items-end">
+                        <div class="col-lg-6 col-md-6 col-12 product__review-header-right">
+                            <h2>Customer reviews & ratings</h2>
+                            <div class="product__review-header-text">
+                                <span class="display-1">4.5</span>
+                                <span class="display-5">out of</span>
+                                <span class="display-1">5</span>
+                            </div>
+                            <div class="product__review-header-quantity">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <span>(234 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 product__review-header-left">
+                            <ul class="product__review-header-list">
+                                <li class="product__review-header-item d-flex align-items-center">
+                                    <span>5 stars</span>
+                                    <span class="product__review-header-progress ms-2"></span>
+                                    <span>187</span>
+                                </li>
+                                <li class="product__review-header-item d-flex align-items-center">
+                                    <span>4 stars</span>
+                                    <span class="product__review-header-progress ms-2"></span>
+                                    <span>15</span>
+                                </li>
+                                <li class="product__review-header-item d-flex align-items-center">
+                                    <span>3 stars</span>
+                                    <span class="product__review-header-progress ms-2"></span>
+                                    <span>17</span>
+                                </li>
+                                <li class="product__review-header-item d-flex align-items-center">
+                                    <span>7 stars</span>
+                                    <span class="product__review-header-progress ms-2"></span>
+                                    <span>25</span>
+                                </li>
+                                <li class="product__review-header-item d-flex align-items-center">
+                                    <span>1 stars</span>
+                                    <span class="product__review-header-progress ms-2"></span>
+                                    <span>31</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-5 d-flex align-items-center justify-content-center flex-column product__review-main separate pt-5">
+                        <ul class="product__review-list">
+                            <li class="product__review-item w-100 d-inline-block">
+                                <div class="product__review-status d-flex justify-content-between">
+                                    <div class="product__review-icon">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="product__review-published">4/1/2023</p>
+                                </div>
+                                <div class="product__review-content">
+                                    <h4>Great purchase!</h4>
+                                    <p>
+                                        I'm always hesitant to buy clothes online, but this dress was perfect. It fit true to size and i
+                                        really like the fabric. I actually plan to order another color too. I've gotten complements on the
+                                        dress from strangers, definitely reinforces my decision to buy!
+                                    </p>
+                                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105" alt="review image" />
+                                </div>
+                                <div class="product__review-auth d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3" alt="" />
+                                    <h3 class="me-2">Kimberly</h3>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="product__review-helpfull d-flex mt-3 justify-content-end">
+                                    <div class="product__review-helpfull-up me-4">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                        <span>4</span>
+                                    </div>
+                                    <div class="product__review-helpfull-down">
+                                        <i class="bi bi-hand-thumbs-down"></i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product__review-item w-100 d-inline-block">
+                                <div class="product__review-status d-flex justify-content-between">
+                                    <div class="product__review-icon">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="product__review-published">4/1/2023</p>
+                                </div>
+                                <div class="product__review-content">
+                                    <h4>Great purchase!</h4>
+                                    <p>
+                                        I'm always hesitant to buy clothes online, but this dress was perfect. It fit true to size and i
+                                        really like the fabric. I actually plan to order another color too. I've gotten complements on the
+                                        dress from strangers, definitely reinforces my decision to buy!
+                                    </p>
+                                    <!-- <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105" alt="review image" /> -->
+                                </div>
+                                <div class="product__review-auth d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3" alt="" />
+                                    <h3 class="me-2">Kimberly</h3>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="product__review-helpfull d-flex mt-3 justify-content-end">
+                                    <div class="product__review-helpfull-up me-4">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                        <span>4</span>
+                                    </div>
+                                    <div class="product__review-helpfull-down">
+                                        <i class="bi bi-hand-thumbs-down"></i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product__review-item w-100 d-inline-block">
+                                <div class="product__review-status d-flex justify-content-between">
+                                    <div class="product__review-icon">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="product__review-published">4/1/2023</p>
+                                </div>
+                                <div class="product__review-content">
+                                    <h4>Great purchase!</h4>
+                                    <p>
+                                        I'm always hesitant to buy clothes online, but this dress was perfect. It fit true to size and i
+                                        really like the fabric. I actually plan to order another color too. I've gotten complements on the
+                                        dress from strangers, definitely reinforces my decision to buy!
+                                    </p>
+                                    <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254" alt="review image" />
+                                </div>
+                                <div class="product__review-auth d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3" alt="" />
+                                    <h3 class="me-2">Kimberly</h3>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="product__review-helpfull d-flex mt-3 justify-content-end">
+                                    <div class="product__review-helpfull-up me-4">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                        <span>4</span>
+                                    </div>
+                                    <div class="product__review-helpfull-down">
+                                        <i class="bi bi-hand-thumbs-down"></i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product__review-item w-100 d-inline-block">
+                                <div class="product__review-status d-flex justify-content-between">
+                                    <div class="product__review-icon">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="product__review-published">4/1/2023</p>
+                                </div>
+                                <div class="product__review-content">
+                                    <h4>Great purchase!</h4>
+                                    <p>
+                                        I'm always hesitant to buy clothes online, but this dress was perfect. It fit true to size and i
+                                        really like the fabric. I actually plan to order another color too. I've gotten complements on the
+                                        dress from strangers, definitely reinforces my decision to buy!
+                                    </p>
+                                    <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77" alt="review image" />
+                                </div>
+                                <div class="product__review-auth d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77" alt="" />
+                                    <h3 class="me-2">Kimberly</h3>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="product__review-helpfull d-flex mt-3 justify-content-end">
+                                    <div class="product__review-helpfull-up me-4">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                        <span>4</span>
+                                    </div>
+                                    <div class="product__review-helpfull-down">
+                                        <i class="bi bi-hand-thumbs-down"></i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product__review-item w-100 d-inline-block">
+                                <div class="product__review-status d-flex justify-content-between">
+                                    <div class="product__review-icon">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="product__review-published">4/1/2023</p>
+                                </div>
+                                <div class="product__review-content">
+                                    <h4>Great purchase!</h4>
+                                    <p>
+                                        I'm always hesitant to buy clothes online, but this dress was perfect. It fit true to size and i
+                                        really like the fabric. I actually plan to order another color too. I've gotten complements on the
+                                        dress from strangers, definitely reinforces my decision to buy!
+                                    </p>
+                                </div>
+                                <div class="product__review-auth d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77" alt="" />
+                                    <h3 class="me-2">Kimberly</h3>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="product__review-helpfull d-flex mt-3 justify-content-end">
+                                    <div class="product__review-helpfull-up me-4">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                        <span>4</span>
+                                    </div>
+                                    <div class="product__review-helpfull-down">
+                                        <i class="bi bi-hand-thumbs-down"></i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product__review-item w-100 d-inline-block">
+                                <div class="product__review-status d-flex justify-content-between">
+                                    <div class="product__review-icon">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="product__review-published">4/1/2023</p>
+                                </div>
+                                <div class="product__review-content">
+                                    <h4>Great purchase!</h4>
+                                    <p>
+                                        I'm always hesitant to buy clothes online, but this dress was perfect. It fit true to size and i
+                                        really like the fabric. I actually plan to order another color too. I've gotten complements on the
+                                        dress from strangers, definitely reinforces my decision to buy!
+                                    </p>
+                                    <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3" alt="review image" />
+                                </div>
+                                <div class="product__review-auth d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77" alt="" />
+                                    <h3 class="me-2">Kimberly</h3>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="product__review-helpfull d-flex mt-3 justify-content-end">
+                                    <div class="product__review-helpfull-up me-4">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                        <span>4</span>
+                                    </div>
+                                    <div class="product__review-helpfull-down">
+                                        <i class="bi bi-hand-thumbs-down"></i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product__review-item w-100 d-inline-block">
+                                <div class="product__review-status d-flex justify-content-between">
+                                    <div class="product__review-icon">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="product__review-published">4/1/2023</p>
+                                </div>
+                                <div class="product__review-content">
+                                    <h4>Great purchase!</h4>
+                                    <p>
+                                        I'm always hesitant to buy clothes online, but this dress was perfect. It fit true to size and i
+                                        really like the fabric. I actually plan to order another color too. I've gotten complements on the
+                                        dress from strangers, definitely reinforces my decision to buy!
+                                    </p>
+                                    <img src="https://images.unsplash.com/photo-1582142839970-2b9e04b60f65" alt="review image" />
+                                </div>
+                                <div class="product__review-auth d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77" alt="" />
+                                    <h3 class="me-2">Kimberly</h3>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="product__review-helpfull d-flex mt-3 justify-content-end">
+                                    <div class="product__review-helpfull-up me-4">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                        <span>4</span>
+                                    </div>
+                                    <div class="product__review-helpfull-down">
+                                        <i class="bi bi-hand-thumbs-down"></i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product__review-item w-100 d-inline-block">
+                                <div class="product__review-status d-flex justify-content-between">
+                                    <div class="product__review-icon">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="product__review-published">4/1/2023</p>
+                                </div>
+                                <div class="product__review-content">
+                                    <h4>Great purchase!</h4>
+                                    <p>
+                                        I'm always hesitant to buy clothes online, but this dress was perfect. It fit true to size and i
+                                        really like the fabric. I actually plan to order another color too. I've gotten complements on the
+                                        dress from strangers, definitely reinforces my decision to buy!
+                                    </p>
+                                </div>
+                                <div class="product__review-auth d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77" alt="" />
+                                    <h3 class="me-2">Kimberly</h3>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="product__review-helpfull d-flex mt-3 justify-content-end">
+                                    <div class="product__review-helpfull-up me-4">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                        <span>4</span>
+                                    </div>
+                                    <div class="product__review-helpfull-down">
+                                        <i class="bi bi-hand-thumbs-down"></i>
+                                        <span>5</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="product__review-showmore mt-5 own-btn own-btn-primary">Show more reviews</button>
+                    </div>
+                </div>
+                <div class="similar">
+                    <div class="similar__header"></div>
+                </div>
+            </main>
+
+            <!-- footer -->
+            <footer class="footer container-fluid w-100 separate p-5">
+                <div class="container w-100">
+                    <div class="row footer__content gx-5">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="footer__item">
+                                <img class="footer__logo" src="./assets/images/logo/logo.png" alt="" />
+                                <p class="text-justify">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi impedit dolorum, laboriosam explicabo
+                                    aperiam ducimus!
+                                </p>
+                                <ul class="footer__payment d-flex align-items-center justify-content-start">
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/images/footer/1.png" alt="" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/images/footer/2.png" alt="" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/images/footer/3.png" alt="" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 mt-5">
+                            <div class="footer__item">
+                                <h1 class="footer__item-heading text-uppercase">Quick link</h1>
+                                <ul>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mt-5">
+                            <div class="footer__item">
+                                <h1 class="footer__item-heading text-uppercase">Account</h1>
+                                <ul>
+                                    <li>
+                                        <a href="#">My Account</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Orders Tracking</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">checkout</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wish list</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 mt-5">
+                            <div class="footer__item">
+                                <h1 class="footer__item-heading text-uppercase">newletter</h1>
+                                <div class="footer__form">
+                                    <input type="text" placeholder="Enter your email" />
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
+                                <ul class="d-flex align-items-center justify-content-start">
+                                    <li>
+                                        <a href="#"><i class="footer__item-icon bi bi-github"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="footer__item-icon bi bi-youtube"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="footer__item-icon bi bi-google"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="footer__item-icon bi bi-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

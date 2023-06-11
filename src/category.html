@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./assets/images/logo/favicon.png" type="image/x-icon" />
+        <title>Nedd Store</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./assets/styles/css/index.css" />
+        <script src="./assets/js/Categories.js" defer></script>
+        <script src="./index.js" defer></script>
+    </head>
+
+    <body>
+        <div class="app">
+            <!-- header -->
+            <header class="header container-fluid w-100">
+                <div class="container h-100 w-100">
+                    <!-- header logo -->
+                    <div class="row align-items-center h-100">
+                        <div class="col-lg-2 col-md-1 col-2">
+                            <a href="./index.html">
+                                <img class="header__logo" src="./assets/images/logo/logo.png" alt="Nedd Logo" />
+                            </a>
+                        </div>
+                        <!-- header logo end -->
+
+                        <!--header nav show on large screen -->
+                        <div class="col-lg-5 col-md-7 d-none d-md-block">
+                            <nav class="header__nav">
+                                <ul class="header__menu d-flex">
+                                    <li class="header__menu-item">
+                                        <a href="./index.html">Home</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./category.html">
+                                            <span>
+                                                Shop
+                                                <i class="bi bi-chevron-down"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="header__subMenu wrapper__menu rounded">
+                                            <li>
+                                                <a
+                                                    href="./category.html"
+                                                    class="d-flex align-items-center justify-content-between hover-with-bg-color"
+                                                >
+                                                    <span>Shop For Men's</span>
+                                                    <i class="bi bi-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="./category.html"
+                                                    class="d-flex align-items-center justify-content-between hover-with-bg-color"
+                                                >
+                                                    <span>Shop For Women's</span>
+                                                    <i class="bi bi-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="./category.html"
+                                                    class="d-flex align-items-center justify-content-between hover-with-bg-color"
+                                                >
+                                                    <span>Shop For Accessory's</span>
+                                                    <i class="bi bi-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./category.html">New arrival</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./category.html">Brands</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="#">About Us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!--Eng header nav show on large screen -->
+
+                        <div class="col-lg-5 col-md-3 col-10">
+                            <div class="header__right d-flex align-items-center justify-content-end">
+                                <div class="header__search d-flex align-items-center">
+                                    <i class="header__search-icon bi bi-search text-center"></i>
+                                    <input class="header__search-input" type="text" placeholder="Search Somthings..." spellcheck="false" />
+                                    <div class="header__search-history wrapper__menu rounded">
+                                        <ul>
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="wrapper__menu-item hover-with-bg-color">
+                                                    <i class="bi bi-search me-3"></i>
+                                                    <span class="text-capitalize">alibaba</span>
+                                                </a>
+                                            </li>
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="wrapper__menu-item hover-with-bg-color">
+                                                    <i class="bi bi-search me-3"></i>
+                                                    <span class="text-capitalize">alibaba</span>
+                                                </a>
+                                            </li>
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="wrapper__menu-item hover-with-bg-color">
+                                                    <i class="bi bi-search me-3"></i>
+                                                    <span class="text-capitalize">alibaba</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <i class="header__search-icon text-center header__search-loading bi bi-arrow-clockwise"></i>
+                                    <!-- <i class="header__search-icon text-center header__search-clear bi bi-x-circle-fill"></i> -->
+                                </div>
+                                <div class="header__actions d-flex align-items-center">
+                                    <div class="header__cart me-3">
+                                        <i class="header__cart-icon text-center rounded-circle bi bi-cart hover-with-bg-color"></i>
+                                        <div class="header__cart-menu header__cart-menu--hasitems wrapper__menu rounded">
+                                            <h3>Shopping Cart</h3>
+                                            <ul>
+                                                <li class="header__cart-item">
+                                                    <a
+                                                        href="#"
+                                                        class="wrapper__menu-item hover-with-bg-color d-flex align-items-center p4 mt-3"
+                                                    >
+                                                        <img
+                                                            src="./assets/images/products/1.jpg"
+                                                            alt="cart item img"
+                                                            class="header__cart-item-img rounded-3 me-4"
+                                                        />
+                                                        <div class="header__cart-item-details">
+                                                            <h5 class="header__cart-item-title me-3">
+                                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, ulla
+                                                            </h5>
+                                                            <span class="header__cart-item-price">$ <span>59</span></span>
+                                                        </div>
+                                                        <i class="header__cart-item-delete text-center bi bi-x-circle-fill"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="header__cart-item">
+                                                    <a
+                                                        href="#"
+                                                        class="wrapper__menu-item hover-with-bg-color d-flex align-items-center p4 mt-3"
+                                                    >
+                                                        <img
+                                                            src="./assets/images/products/2.jpg"
+                                                            alt="cart item img"
+                                                            class="header__cart-item-img rounded-3 me-4"
+                                                        />
+                                                        <div class="header__cart-item-details">
+                                                            <h5 class="header__cart-item-title me-3">
+                                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, ulla
+                                                            </h5>
+                                                            <span class="header__cart-item-price">$ <span>59</span></span>
+                                                        </div>
+                                                        <i class="header__cart-item-delete text-center bi bi-x-circle-fill"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="header__cart-item">
+                                                    <a
+                                                        href="#"
+                                                        class="wrapper__menu-item hover-with-bg-color d-flex align-items-center p4 mt-3"
+                                                    >
+                                                        <img
+                                                            src="./assets/images/products/3.jpg"
+                                                            alt="cart item img"
+                                                            class="header__cart-item-img rounded-3 me-4"
+                                                        />
+                                                        <div class="header__cart-item-details">
+                                                            <h5 class="header__cart-item-title me-3">
+                                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, ulla
+                                                            </h5>
+                                                            <span class="header__cart-item-price">$ <span>59</span></span>
+                                                        </div>
+                                                        <i class="header__cart-item-delete text-center bi bi-x-circle-fill"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="header__cart-btns d-flex align-items-center justify-content-center">
+                                                <a href="#" class="own-btn own-btn-danger">Clear Cart</a>
+                                                <a href="./cart.html" class="own-btn own-btn-primary">Go to Cart Page</a>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="header__cart-menu header__cart-menu--noitems wrapper__menu rounded p-4 text-center">
+                                            <img src="./assets/images/cartEmpty/cart-empty.png" alt="emptycart" />
+                                            <h3>Your cart currently is empty</h3>
+                                            <p class="mt-4 mb-4">Before proceed to checkout, you must add some produts to your cart.</p>
+                                            <a class="p-2 own-btn own-btn-primary">
+                                                <i class="bi bi-arrow-bar-left"></i>
+                                                Return to Shop
+                                            </a>
+                                        </div> -->
+                                    </div>
+                                    <div class="header__auth">
+                                        <div class="header__auth--no-user">
+                                            <i class="header__auth-icon text-center rounded-circle bi bi-person hover-with-bg-color"></i>
+                                            <ul class="header__auth-menu wrapper__menu rounded">
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-translate"></i>
+                                                        <span> Language </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-question-square"></i>
+                                                        <span>Feedback and help</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="#"
+                                                        class="d-flex align-items-center justify-content-start hover-with-bg-color separate"
+                                                    >
+                                                        <i class="bi bi-box-arrow-in-right"></i>
+                                                        <span>Login</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- <div class="header__auth--has-user d-flex align-items-center justify-content-center">
+                                            <img class="header__userAvatar" src="./assets/images/banner/Big_banner/big_banner.jpg" alt="" />
+                                            <ul class="header__auth-menu wrapper__menu">
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-person"></i>
+                                                        <span> View profile </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-gear"></i>
+                                                        <span> Settings </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-translate"></i>
+                                                        <span> Language </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center justify-content-start hover-with-bg-color">
+                                                        <i class="bi bi-question-square"></i>
+                                                        <span>Feedback and help</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="#"
+                                                        class="d-flex align-items-center justify-content-start hover-with-bg-color separate"
+                                                    >
+                                                        <i class="bi bi-box-arrow-left"></i>
+                                                        <span>Log Out</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- nav show on mobile -->
+                                <div class="header__nav--onMobile-wrapper d-md-none d-sm-block">
+                                    <label for="header__checkbox-show-menu">
+                                        <i class="header__nav--onMobile-menu-icon bi bi-list hover-with-bg-color rounded-circle"></i>
+                                    </label>
+                                    <input type="checkbox" id="header__checkbox-show-menu" class="d-none" />
+                                    <label for="header__checkbox-show-menu" class="header__nav--onMobile-overlay d-none"></label>
+                                    <nav class="header__nav--onMobile">
+                                        <label for="header__checkbox-show-menu">
+                                            <i class="header__nav--onMobile-close bi bi-x-lg"></i>
+                                        </label>
+                                        <ul class="header__menu d-flex">
+                                            <li class="header__menu-item">
+                                                <a href="#">Home</a>
+                                            </li>
+                                            <li class="header__menu-item">
+                                                <a href="#"> Shop </a>
+                                            </li>
+                                            <li class="header__menu-item">
+                                                <a href="#">New arrival</a>
+                                            </li>
+                                            <li class="header__menu-item">
+                                                <a href="#">Brands</a>
+                                            </li>
+                                            <li class="header__menu-item">
+                                                <a href="#">About Us</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header End -->
+            <main class="main container">
+                <div class="categories__header">
+                    <h1 class="categories__header-title">Shopping with categories</h1>
+                    <p class="categories__header-subtitle mt-3">
+                        We not only help you design exceptional products, but also make it easy for you to share your designs with more
+                        like-minded people.
+                    </p>
+                </div>
+                <div class="categories__content separate">
+                    <div class="categories__actions d-flex">
+                        <div class="categories__action categories__price">
+                            <button class="categories__action-tab own-btn own-btn-outline-primary">
+                                <i class="bi bi-coin me-3"></i>
+                                <span class="text-capitalize">
+                                    <span class="categories__price-min-val">$<small>200</small></span>
+                                    <span class="div">-</span>
+                                    <span class="categories__price-max-val">$<small>700</small></span>
+                                </span>
+                            </button>
+                            <div class="categories__action-menu">
+                                <div class="categories__action-menu-content">
+                                    <h3 class="categories__action-menu-title">Price Range</h3>
+                                    <div class="categories__price-minmax d-flex align-items-center justify-content-between">
+                                        <div class="categories__price-min d-flex flex-column">
+                                            <label>Min Price</label>
+                                            <span
+                                                class="categories__price-min-val d-flex justify-content-between own-btn own-btn-outline-primary"
+                                                >$<small>200</small>
+                                            </span>
+                                        </div>
+                                        <div class="categories__price-max d-flex flex-column">
+                                            <label>Max Price</label>
+                                            <span
+                                                class="categories__price-max-val d-flex justify-content-between own-btn own-btn-outline-primary"
+                                                >$<small>700</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="categories__price-progress">
+                                        <div class="categories__price-progress-bar"></div>
+                                    </div>
+                                    <div class="categories__price-range">
+                                        <input type="range" min="0" max="1000" value="200" id="price-min" />
+                                        <input type="range" min="0" max="1000" value="700" id="price-max" />
+                                    </div>
+                                </div>
+                                <div class="categories__action-menu-footer d-flex justify-content-between">
+                                    <button class="categories__action-menu-clear own-btn own-btn-outline-primary">Clear</button>
+                                    <button class="categories__action-menu-apply own-btn own-btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categories__action categories__category">
+                            <button class="categories__action-tab own-btn own-btn-outline-primary">
+                                <i class="bi bi-bag-dash"></i>
+                                <span class="text-capitalize me-3 ms-3">Categories</span>
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <div class="categories__action-menu categories__category-menu">
+                                <div class="categories__action-menu-content">
+                                    <div class="categories__action-checkbox categories__category-item">
+                                        <input type="checkbox" name="categories" id="categories-all" />
+                                        <label for="categories-all">All Categories</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__category-item separate">
+                                        <input type="checkbox" name="categories" id="categories-newarrival" />
+                                        <label for="categories-newarrival">New Arrival</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__category-item">
+                                        <input type="checkbox" name="categories" id="categories-sale" />
+                                        <label for="categories-sale">On Sale</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__category-item">
+                                        <input type="checkbox" name="categories" id="categories-men" />
+                                        <label for="categories-men">For Men</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__category-item">
+                                        <input type="checkbox" name="categories" id="categories-women" />
+                                        <label for="categories-women">For Women</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__category-item">
+                                        <input type="checkbox" name="categories" id="categories-kid" />
+                                        <label for="categories-kid">For Kid</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__category-item">
+                                        <input type="checkbox" name="categories" id="categories-accessories" />
+                                        <label for="categories-accessories">Accessories</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </div>
+                                <div class="categories__action-menu-footer d-flex justify-content-between">
+                                    <button class="categories__action-menu-clear own-btn own-btn-outline-primary">Clear</button>
+                                    <button class="categories__action-menu-apply own-btn own-btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categories__action categories__color">
+                            <button class="categories__action-tab own-btn own-btn-outline-primary">
+                                <i class="bi bi-paint-bucket"></i>
+                                <span class="text-capitalize me-3 ms-3">Color</span>
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <div class="categories__action-menu categories__color-menu">
+                                <div class="categories__action-menu-content">
+                                    <div class="categories__action-checkbox categories__color-item">
+                                        <input type="checkbox" name="color" id="color-white" />
+                                        <label for="color-white">White</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__color-item">
+                                        <input type="checkbox" name="color" id="color-beige" />
+                                        <label for="color-beige">Beige</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__color-item">
+                                        <input type="checkbox" name="color" id="color-blue" />
+                                        <label for="color-blue">Blue</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__color-item">
+                                        <input type="checkbox" name="color" id="color-black" />
+                                        <label for="color-black">Black</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__color-item">
+                                        <input type="checkbox" name="color" id="color-brown" />
+                                        <label for="color-brown">Brown</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__color-item">
+                                        <input type="checkbox" name="color" id="color-green" />
+                                        <label for="color-green">Green</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-checkbox categories__color-item">
+                                        <input type="checkbox" name="color" id="color-navy" />
+                                        <label for="color-navy">Navy</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </div>
+                                <div class="categories__action-menu-footer d-flex justify-content-between">
+                                    <button class="categories__action-menu-clear own-btn own-btn-outline-primary">Clear</button>
+                                    <button class="categories__action-menu-apply own-btn own-btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="categories__action categories__sort">
+                            <button class="categories__action-tab own-btn own-btn-outline-primary">
+                                <i class="bi bi-filter-circle"></i>
+                                <span class="text-capitalize me-3 ms-3">Sort Order</span>
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <div class="categories__action-menu categories__sort-menu">
+                                <div class="categories__action-menu-content">
+                                    <div class="categories__action-radio categories__sort-item">
+                                        <input type="radio" name="sort" checked id="sort-popular" />
+                                        <label class="text-capitalize" for="sort-popular">most popular</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-radio categories__sort-item">
+                                        <input type="radio" name="sort" id="sort-newest" />
+                                        <label class="text-capitalize" for="sort-newest">newest</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-radio categories__sort-item">
+                                        <input type="radio" name="sort" id="sort-lowtohight" />
+                                        <label class="text-capitalize" for="sort-lowtohight">price low - hight</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                    <div class="categories__action-radio categories__sort-item">
+                                        <input type="radio" name="sort" id="sort-highttolow" />
+                                        <label class="text-capitalize" for="sort-highttolow">price hight - low</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </div>
+                                <div class="categories__action-menu-footer d-flex justify-content-between">
+                                    <button class="categories__action-menu-clear own-btn own-btn-outline-primary">Clear</button>
+                                    <button class="categories__action-menu-apply own-btn own-btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 categories__products">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/1.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/2.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/3.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/4.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/5.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/6.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/1.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/2.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/3.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/4.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <a href="./product.html" class="product__item">
+                                <div class="product__item-img d-flex align-items-center justify-content-center flex-column">
+                                    <img class="rounded-5" src="./assets/images/products/5.jpg" alt="products img" loading="lazy" />
+                                    <div class="product__item-actions d-flex flex-nowrap justify-content-around gap-3">
+                                        <button class="own-btn own-btn-primary product__item-add-cart">
+                                            <i class="bi bi-handbag me-1"></i>
+                                            Add to cart
+                                        </button>
+                                        <button class="own-btn own-btn-primary product__item-add-wishlist">
+                                            <i class="bi bi-heart me-1"></i>
+                                            Add to wish list
+                                        </button>
+                                    </div>
+                                    <div class="product__item-tags">
+                                        <span class="product__item-tag--timelimit own-btn own-btn-white me-2">
+                                            <i class="bi bi-clock me-2"></i>
+                                            Limit Edition
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product__item-details">
+                                    <div class="product__item-colors d-flex align-items-center justify-content-start">
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle active"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                        <span
+                                            class="product__item-color d-flex align-items-center justify-content-center rounded-circle"
+                                        ></span>
+                                    </div>
+                                    <h2 class="product__item-name">Leather Gloves</h2>
+                                    <p class="product__item-desc">Perfect mint green</p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="product__item-price rounded-3 text-center">$<span>42</span></div>
+                                        <div class="product__item-review">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>4.5 (225 reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="categories__paging d-flex justify-content-end">
+                        <ul class="d-flex">
+                            <li class="btn-circle-icon btn-circle-border">
+                                <a href="#">
+                                    <i class="bi bi-arrow-left"></i>
+                                </a>
+                            </li>
+                            <li class="btn-circle-icon btn-circle-border active">
+                                <a href="#"> 1 </a>
+                            </li>
+                            <li class="btn-circle-icon btn-circle-border">
+                                <a href="#"> 2 </a>
+                            </li>
+                            <li class="btn-circle-icon btn-circle-border">
+                                <a href="#"> 3 </a>
+                            </li>
+                            <li class="btn-circle-icon btn-circle-border">
+                                <a href="#"> ... </a>
+                            </li>
+                            <li class="btn-circle-icon btn-circle-border">
+                                <a href="#"> 8 </a>
+                            </li>
+                            <li class="btn-circle-icon btn-circle-border">
+                                <a href="#"> 9 </a>
+                            </li>
+                            <li class="btn-circle-icon btn-circle-border">
+                                <a href="#"> 10 </a>
+                            </li>
+                            <li class="btn-circle-icon btn-circle-border">
+                                <a href="#">
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="categories__experts">
+                    <div class="categories__experts-header d-flex justify-content-between">
+                        <h2>Chosen by our experts</h2>
+                        <div class="categories__experts-direct d-flex">
+                            <button class="categories__experts-prev btn-circle-icon">
+                                <i class="bi bi-arrow-left"></i>
+                            </button>
+                            <button class="categories__experts-next btn-circle-icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row g-5 categories__experts-list flex-nowrap">
+                        <div class="col-lg-4 col-md-6 categories__experts-item">
+                            <div class="categories__experts-img">
+                                <img class="categories__experts-img--thumb rounded-5" src="./assets/images/products/1.jpg" alt="thumb" />
+                                <div class="categories__experts-img--small d-flex align-items-center">
+                                    <img src="./assets/images/products/2.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/3.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/4.jpg" class="rounded-5" alt="" />
+                                </div>
+                            </div>
+                            <div class="categories__experts-info">
+                                <h2 class="categories__experts-name">suede Bomber jacket</h2>
+                                <div class="categories__experts-detail d-flex align-items-center">
+                                    <p>orange</p>
+                                    <span>
+                                        <i class="bi bi-star-fill"></i>
+                                        4.9 (276 reviews)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 categories__experts-item">
+                            <div class="categories__experts-img">
+                                <img class="categories__experts-img--thumb rounded-5" src="./assets/images/products/2.jpg" alt="thumb" />
+                                <div class="categories__experts-img--small d-flex align-items-center">
+                                    <img src="./assets/images/products/3.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/4.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/5.jpg" class="rounded-5" alt="" />
+                                </div>
+                            </div>
+                            <div class="categories__experts-info">
+                                <h2 class="categories__experts-name">suede Bomber jacket</h2>
+                                <div class="categories__experts-detail d-flex align-items-center">
+                                    <p>orange</p>
+                                    <span>
+                                        <i class="bi bi-star-fill"></i>
+                                        4.9 (276 reviews)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 categories__experts-item">
+                            <div class="categories__experts-img">
+                                <img class="categories__experts-img--thumb rounded-5" src="./assets/images/products/3.jpg" alt="thumb" />
+                                <div class="categories__experts-img--small d-flex align-items-center">
+                                    <img src="./assets/images/products/4.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/5.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/6.jpg" class="rounded-5" alt="" />
+                                </div>
+                            </div>
+                            <div class="categories__experts-info">
+                                <h2 class="categories__experts-name">suede Bomber jacket</h2>
+                                <div class="categories__experts-detail d-flex align-items-center">
+                                    <p>orange</p>
+                                    <span>
+                                        <i class="bi bi-star-fill"></i>
+                                        4.9 (276 reviews)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 categories__experts-item">
+                            <div class="categories__experts-img">
+                                <img class="categories__experts-img--thumb rounded-5" src="./assets/images/products/4.jpg" alt="thumb" />
+                                <div class="categories__experts-img--small d-flex align-items-center">
+                                    <img src="./assets/images/products/1.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/2.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/3.jpg" class="rounded-5" alt="" />
+                                </div>
+                            </div>
+                            <div class="categories__experts-info">
+                                <h2 class="categories__experts-name">suede Bomber jacket</h2>
+                                <div class="categories__experts-detail d-flex align-items-center">
+                                    <p>orange</p>
+                                    <span>
+                                        <i class="bi bi-star-fill"></i>
+                                        4.9 (276 reviews)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 categories__experts-item">
+                            <div class="categories__experts-img">
+                                <img class="categories__experts-img--thumb rounded-5" src="./assets/images/products/5.jpg" alt="thumb" />
+                                <div class="categories__experts-img--small d-flex align-items-center">
+                                    <img src="./assets/images/products/2.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/3.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/4.jpg" class="rounded-5" alt="" />
+                                </div>
+                            </div>
+                            <div class="categories__experts-info">
+                                <h2 class="categories__experts-name">suede Bomber jacket</h2>
+                                <div class="categories__experts-detail d-flex align-items-center">
+                                    <p>orange</p>
+                                    <span>
+                                        <i class="bi bi-star-fill"></i>
+                                        4.9 (276 reviews)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 categories__experts-item">
+                            <div class="categories__experts-img">
+                                <img class="categories__experts-img--thumb rounded-5" src="./assets/images/products/6.jpg" alt="thumb" />
+                                <div class="categories__experts-img--small d-flex align-items-center">
+                                    <img src="./assets/images/products/3.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/4.jpg" class="rounded-5" alt="" />
+                                    <img src="./assets/images/products/5.jpg" class="rounded-5" alt="" />
+                                </div>
+                            </div>
+                            <div class="categories__experts-info">
+                                <h2 class="categories__experts-name">suede Bomber jacket</h2>
+                                <div class="categories__experts-detail d-flex align-items-center">
+                                    <p>orange</p>
+                                    <span>
+                                        <i class="bi bi-star-fill"></i>
+                                        4.9 (276 reviews)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- footer -->
+            <footer class="footer container-fluid w-100 separate p-5">
+                <div class="container w-100">
+                    <div class="row footer__content gx-5">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="footer__item">
+                                <img class="footer__logo" src="./assets/images/logo/logo.png" alt="" />
+                                <p class="text-justify">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi impedit dolorum, laboriosam explicabo
+                                    aperiam ducimus!
+                                </p>
+                                <ul class="footer__payment d-flex align-items-center justify-content-start">
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/images/footer/1.png" alt="" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/images/footer/2.png" alt="" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/images/footer/3.png" alt="" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 mt-5">
+                            <div class="footer__item">
+                                <h1 class="footer__item-heading text-uppercase">Quick link</h1>
+                                <ul>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mt-5">
+                            <div class="footer__item">
+                                <h1 class="footer__item-heading text-uppercase">Account</h1>
+                                <ul>
+                                    <li>
+                                        <a href="#">My Account</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Orders Tracking</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">checkout</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wish list</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 mt-5">
+                            <div class="footer__item">
+                                <h1 class="footer__item-heading text-uppercase">newletter</h1>
+                                <div class="footer__form">
+                                    <input type="text" placeholder="Enter your email" />
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
+                                <ul class="d-flex align-items-center justify-content-start">
+                                    <li>
+                                        <a href="#"><i class="footer__item-icon bi bi-github"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="footer__item-icon bi bi-youtube"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="footer__item-icon bi bi-google"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="footer__item-icon bi bi-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

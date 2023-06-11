@@ -1,0 +1,11 @@
+// sass ./index.scss ../css/app.css -w
+
+@import './Buton.scss';
+@import './Header.scss';
+@import './Footer.scss';
+@import './ProductItem.scss';
+
+@import './Home/Home.scss';
+@import './Categories/categories.scss';
+@import './Product/Product.scss';
+@import './Cart/Cart.scss';

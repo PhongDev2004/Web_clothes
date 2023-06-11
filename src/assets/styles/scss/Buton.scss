@@ -1,0 +1,103 @@
+.own-btn {
+    padding: 5px 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    & + & {
+        margin-left: 10px;
+    }
+}
+.own-btn-primary {
+    border-radius: 999px;
+    background-color: var(--primary-color) !important;
+    color: var(--white) !important;
+    span {
+        color: var(--white);
+    }
+    &:hover {
+        opacity: 0.85;
+        color: var(--white) !important;
+    }
+}
+.own-btn-danger {
+    border-radius: 999px;
+    background-color: var(--btn-danger-color) !important;
+    color: var(--white) !important;
+    &:hover {
+        opacity: 0.85;
+        color: var(--white) !important;
+    }
+}
+.own-btn-white {
+    background-color: var(--white) !important;
+    color: var(--primary-color) !important;
+    border-radius: 999px;
+    span {
+        color: var(--primary-color);
+    }
+    &:hover {
+        opacity: 0.85;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.08);
+    }
+}
+.own-btn-outline-white {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    &:hover {
+        color: var(--white);
+        background-color: var(--primary-color);
+    }
+}
+.own-btn-outline-primary {
+    background-color: transparent;
+    color: var(--primary-second-color);
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    &:hover {
+        border-color: var(--primary-color);
+    }
+}
+.own-btn-large {
+    width: 200px;
+    height: 50px;
+    font-size: 1.8rem;
+}
+
+//// button only icons
+.btn-circle-icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    &:hover {
+        border: 1px solid var(--primary-second-color);
+    }
+    & + & {
+        margin-left: 15px;
+    }
+}
+
+.btn-circle-border {
+    border: 1px solid var(--primary-second-color);
+}
+
+/// price product
+
+.price-pd {
+    padding: 6px 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
